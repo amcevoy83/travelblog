@@ -83,7 +83,7 @@ ALLOWED_HOSTS = ['*']
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'travelblog_name',
+        'NAME': 'travelblog_db',
         'USER': 'travelblog_user',
         'PASSWORD': 'travelblog_pw',
         'HOST': 'localhost',
