@@ -1,0 +1,42 @@
+{%  extends "base.html" %}
+{% block content %}
+
+    <header>
+<div class="homecontainer"></div>
+</header>
+<div class="herobar">
+    <h2>Travel Escapades</h2>
+    <h4>The Life & Times of An Irish Girl Abroad</h4>
+    <div id="button"class="intro_readon">Read On ></div>
+
+</div>
+    <div class="row">
+        <div class="col-sm-12 overview">
+
+            <a href="{% url 'melbourne' %}">
+            <div class="col-sm-4 fader homepod "><h1>Some Ramblings</h1>
+            <div class="inner ramb"></div>
+            </div></a>
+
+            <a href="{% url 'gallery' %}">
+            <div class="col-sm-4 fader homepod"><h1>Life through a lens</h1>
+            <div class="inner gallery"></div>
+            </div>
+            </a>
+
+            <a href="{% url 'suggestion_post' %}">
+            <div class="col-sm-4 fader homepod" ><h1>Your Suggestions</h1>
+            <div class="inner suggest"></div>
+            </div>
+            </a>
+
+{#            <a href="{% url 'melbourne' %}">#}
+{#            <div class="col-sm-3 fader"><h1>Say Hello</h1>#}
+{#            <div class="inner hello"></div>#}
+{#            </div>#}
+{#            </a>#}
+</div>
+
+    </div>
+
+{% endblock %}

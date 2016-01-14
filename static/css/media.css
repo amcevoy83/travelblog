@@ -1,0 +1,152 @@
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .overview {
+        top: 15%;
+        width: 75%;
+        left: 4%;
+    }
+    /*.topbar nav a{*/
+        /*padding: 8px 10px;*/
+        /*color: #fff;*/
+        /*text-transform: uppercase;*/
+        /*margin: 3%;*/
+        /*opacity: 0.7;*/
+        /*font-weight: bold;*/
+        /*border: 1px solid transparent;*/
+    /*}*/
+    .homepod{
+        min-width: 600px;
+    }
+
+    .homecontainer{
+	    height: 1100px;   /*update*/
+    }
+
+    .herobar{
+        width: 70%;
+        top: 30%;
+        left: 15%;
+    }
+
+    .imagegallery {
+        top: 0px;
+        margin: 0px;
+        height: auto;
+    }
+
+    #mobile_gallery{
+        display: block;
+        position: relative;
+        top: 50px;
+        left: 0px;
+        margin: 0px;
+    }
+    .imagegallery, .center{
+        display:none;
+    }
+}
+
+@media screen and (min-width: 320px) and (max-width: 600px){
+
+    .overview {
+        margin-left: 8%;
+        top: 15%;
+        width: 90%;
+    }
+
+    nav{
+        display: none;
+    }
+
+
+#mobile_gallery{
+    display: block;
+    position: relative;
+    top: 50px;
+    left: 0px;
+    margin: 0px;
+}
+    .imagegallery, .center{
+        display:none;
+    }
+    #activatenav{
+        display: block;
+        background-color: #12ABB2;
+        color: #fff;
+        font-size: 1.5em;
+        border: 1px solid rgba(255,255,255,0.5);
+        margin: 25px 15px 15px 15px ;
+        float: right;
+    }
+    #activatenav:hover{
+            ;background-color: rgba(255,255,255,0.3);
+        border: 1px solid rgba(255,255,255,1);
+        transition: 0.3s;
+    }
+    .mobilenav{
+        width: 100%;
+        padding:10px;
+        margin-top: 20px;
+        position: fixed;
+        top: 23%;
+        background-color: #12ABB2;
+    }
+   .mobilenav a{
+       display:block;
+       text-align: left;
+    }
+   .topbar nav{
+    margin: 0;
+}
+    .herobar h2{
+    font-size: 2em;
+    }
+
+    .homepod{
+        min-width: 95%;
+    }
+
+    .homecontainer{
+	height: 1100px;
+    }
+
+    .herobar{
+        width: 90%;
+        top: 20%;
+        left: 5%;
+    }
+
+    .intro_readon{
+        width: 80%;
+        margin-bottom: 25px;
+    }
+
+    .newpostform{
+        position: relative;
+        top: 140px;
+        font-size: 1em;
+        margin: 0px;
+        padding: 10px 20px;
+    }
+    .imagegallery {
+        top: 0px;
+        margin: 0px;
+        height: auto;
+    }
+    .carousel{
+        width: 100%;
+    }
+    #mobile_gallery .col-sm-12{
+        padding: 0px;
+    }
+    .articleimg{
+        width: 100%;
+        height: 250px;
+        position: relative;
+        top: 50px;
+        overflow: hidden;
+    }
+    .articleimg img{
+    width: 100%;
+    top: 20px;
+    }
+}

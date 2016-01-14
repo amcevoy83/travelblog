@@ -1,0 +1,30 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+    <style>
+
+</style>
+
+    	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+  	<script src='{% static "js/common.css" %}'></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+
+</head>
+<body>
+
+ <nav>
+        <a class="fader" href='{% url 'post_list' %}' >View All</a>
+        <a class="fader" href='{% url 'melbourne' %}'>Melbourne</a>
+        <a class="fader" href="{% url 'post_list' %}?top=True">East Coast</a>
+        <a class="fader" href="{% url 'post_list' %}?top=True">Red Centre</a>
+        <a href="{% url 'post_list' %}?top=True">West Coast</a>
+    </nav>
+</body>
+
+</html>

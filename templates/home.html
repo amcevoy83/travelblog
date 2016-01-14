@@ -1,0 +1,32 @@
+{%  extends "base.html" %}
+
+{% block content %}
+<h1>Welcome to the blog...</h1>
+<div class="col-xs-6" >
+      {% for post in posts %}
+               <div class="col-sm-3" style="border:1px solid #eee;padding: 25px; margin: 10px;min-width:350px;">
+            <h1><a href="">{{ post.post_title }}</a></h1>
+            <!-- linebreak allows the browser to interpret words and not split them in half, it tries to break suitably across lines-->
+            <p>{{ post.content|truncatewords:30 }}</p>
+                <button class="btn btn-default" onclick="location.href = {{ post.id }}">Read More</button>
+            <p>{{ post.published_date }} | <b>Views:</b> {{ post.views }} | <b>Tag:</b> {{ post.tag }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+    <div style="background-color: #12ABB2;">
+    {% for post in top5 %}
+
+        <div class="col-sm-3" style="border:1px solid #eee;padding: 25px; margin: 10px;min-width:350px;">
+            <h1><a href="">{{ post.post_title }}</a></h1>
+            <hr>
+            <!-- linebreak allows the browser to interpret words and not split them in half, it tries to break suitably across lines-->
+            <p>{{ post.content|truncatewords:30 }}</p>
+                <button class="btn btn-default" onclick="location.href = '/blog/{{ post.id }}'">Read More</button>
+            <p>{{ post.published_date }} | <b>Views:</b> {{ post.views }} | <b>Tag:</b> {{ post.tag }}</p>
+        </div>
+
+    {% endfor %}
+   </div>
+
+{% endblock content %}

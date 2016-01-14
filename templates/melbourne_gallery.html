@@ -1,0 +1,40 @@
+{%  extends "base.html" %}
+{% block content %}
+
+<div class="col-sm-12 blogcontent row-centered myposts ">
+
+    {% for post in top5 %}
+{#        <div class="col-sm-6 gallerycontent">#}
+{#            <img class="galleryimg" src="/media/{{ post.image }}" />#}
+{#        </div>#}
+<div id="gridview">
+        <figure class="effect">
+        <div class="col-sm-3">
+						<img src="/media/{{ post.image }}" alt="{{ post.title }}"/>
+						<figcaption><a href="/blog/{{ post.id }}">
+							<h2>{{ post.post_title }}</h2>
+							<div>
+								<p>{{ post.content|truncatewords:15}}</p>
+                                <p ><a href="/blog/{{ post.id }}" class="readmore">Read More ></a></p>
+							</div></a>
+						</figcaption>
+	 				</div>
+
+</figure>
+</div>{% endfor %}
+        <div id="listview">
+    {% for post in posts %}
+        <div class="col-sm-3"><img class="listimg" src="/media/{{ post.image }}" /></div>
+        <div class="col-sm-8 postcontainer">
+            <h1><a href="{{ post.id }}">{{ post.post_title }}</a></h1>
+            <!-- linebreak allows the browser to interpret words and not split them in half, it tries to break suitably across lines-->
+            <p>{{ post.content|truncatewords:50 }}</p>
+                <button class="btn" onclick="location.href = {{ post.id }}">Read More ></button>
+            <p>{{ post.published_date }} | <b>Views:</b> {{ post.views }} | <b>Tag:</b> {{ post.tag }}</p>
+        </div>
+    {% endfor %}
+</div>
+
+</div>
+
+{% endblock content %}

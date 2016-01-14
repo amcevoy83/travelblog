@@ -1,0 +1,40 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Travel Escapades</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/3.3.6/cerulean/bootstrap.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Shadows+Into+Light' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Lato' rel='stylesheet' type='text/css'>
+    <link rel = "stylesheet" href="{% static "css/blog.css" %}">
+    <link rel = "stylesheet" href="{% static "css/media.css" %}">
+
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+
+  	<script src='{% static "js/common.js" %}'></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.4/jquery-ui.min.js"></script>
+</head>
+<body>
+<div class="topbar {% ifequal request.path '/'%}hometopbar{% endifequal %}" >
+    <div class="title"> <a href='{% url 'home' %}'>Travel Escapades</a></div>
+
+    <div><button id="activatenav" class="{% ifequal request.path '/'%}hide{% endifequal %}" >&#9776;</button></div>
+    <nav class="{% ifequal request.path '/'%}hide{% endifequal %}">
+        <a href='{% url 'melbourne' %}' class="{% ifequal request.path '/blog/'%} active {% endifequal%}">Some Ramblings</a>
+        <a href="{% url 'gallery' %}"class="{% ifequal request.path '/gallery/'%} active {% endifequal%}">Life through a Lens</a>
+        <a href="{% url 'suggestion_post' %}" class="{% ifequal request.path '/suggestion/'%} active {% endifequal%}" >Your Suggestions?</a>
+    </nav>
+</div>
+                <!--blog entries -->
+        {% block content %}
+
+         {% endblock %}
+
+</body><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+
+<script src="{% static "js/_cookie.js" %}"></script>
+</html>

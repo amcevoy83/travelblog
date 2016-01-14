@@ -1,0 +1,558 @@
+body{
+    font-family: Helvetica;
+    padding-top: 50px;
+}
+
+.maincontent{
+    border: 1px solid #ededed;
+    top: 160px;
+}
+
+.postcontainer{
+    margin: 20px 0;
+    border-bottom: 1px solid #eeeeee;
+}
+
+/*---------------////HOME ELEMENTS ////-------------------*/
+
+
+header{
+	background-image: url("../img/uluru.jpg");
+	width: 100%;
+	margin: 0 auto;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position: center;
+	position: absolute;
+    top: 0;
+	color: #fff;
+	height: 850px;   /*update*/
+}
+
+.homepod{
+    min-width: 320px;
+}
+.herobar{
+    width: 33%;
+    position: fixed;
+    top: 30%;
+    left: 30%;
+    color: #fff;
+    background-color: rgba(18, 171, 178, 0.46);
+    padding: 2%;
+    text-align: center;
+    border: 10px solid #fff;
+}
+
+.herobar h2{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 4em;
+    color: #fff;
+}
+
+.herobar h4{
+    color: #fff;
+    font-size: 1.1em;
+}
+.intro_readon{
+	border: 1px solid #fff;
+	padding: 2%;
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 25px;
+	text-decoration: none;
+	text-transform: uppercase;
+    background-color: rgba(255,255,255,0.2);
+	color: #fff;
+    font-weight: bold;
+}
+
+.intro_readon:hover{
+	background-color: rgba(255,255,255,0);
+	border: 1px solid #fff;
+	transition: 0.4s all ease-in;
+}
+
+.overview{
+    padding: 0% 2%;
+    position: absolute;
+    margin-left: 10%;
+    top: 25%;
+    width: 80%;
+}
+
+.overview a{
+    -webkit-filter: grayscale(100%);
+
+}
+.overview a:hover{
+     -webkit-filter: grayscale(0%);
+    transition: .4s ease-in-out;
+
+}
+.inner{
+    height: 180px;
+    margin-top: 0px;
+    overflow: hidden;
+    border-bottom: 6px solid #fff;
+	text-align: center;
+	cursor: pointer;
+}
+
+.overview .fader:hover{
+    -webkit-transform: scale(1.05);
+    overflow: hidden; transition: .4s ease-in-out;
+}
+.ramb, .gallery, .suggest, .hello{
+    width: 100%;
+	margin: 0 auto;
+    overflow: hidden;
+	background-repeat:no-repeat;
+	background-size:cover;
+	background-position: center;
+}
+
+.ramb{background-image: url("../img/Typewriter.jpg");}
+.gallery{background-image: url("../img/melbs.jpg");}
+.suggest{background-image: url("../img/lonelyplanets.jpg");}
+.hello{background-image: url("../img/retrophone.jpg");}
+
+
+.fader {
+    max-width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 3px solid #fff;
+    display: none;
+    background: rgba(255,255,255,1);
+    z-index: 1000;
+}
+
+.fader h1{
+    text-align: center;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.6em;
+}
+/*---------------////BLOG ELEMENTS ////-------------------*/
+#listview{
+    display:none;
+}
+
+.blogcontent{
+    /*height: 500px;*/
+    overflow: hidden;
+    top: 130px;
+    padding: 5px 0;
+}
+
+.blogcontent h1{
+    padding: 10px 30px;
+    color: #555;
+    font-size: 2em;
+    text-transform: uppercase;
+    font-family: "Lato";
+}
+
+.myposts{
+    background-color: #efefef;
+    padding: 30px;
+    width: 100%;
+    margin: 0px;
+}
+
+.col-sm-3{
+    padding: 0px;
+}
+.blogimg{
+    width:100%;
+    height: 75%;
+    max-width: 500px;
+}
+
+
+/*---------------////ARTICLE PAGE ELEMENTS ////-------------------*/
+
+.articleimg{
+    width: 100%;
+    height: 400px;
+    position: relative;
+    top: 50px;
+    overflow: hidden;
+}
+.articleimg img{
+    width: 100%;
+}
+
+.articlecontent{
+    background-color: #fff;
+    top: -10px;
+    padding: 5px 30px;
+}
+.articlecontent h3{
+    font-size: 1.8em;
+    border-bottom: 1px solid #12ABB2;
+    color: #12ABB2;
+    padding-bottom: 15px;
+}
+
+.articlecontent h6{
+    font-size: 1em;
+    color: #d7d7d7;
+    padding-bottom: 15px;
+}
+
+.articlecontent button{
+    margin-bottom: 5%;
+}
+
+/*---------------////COMMON ELEMENTS ////-------------------*/
+ #activatenav{
+        display: none;
+        height: 5%;
+        font-size: 0.5em;
+    }
+.listimg{
+    width: 100%;
+    margin-top: 10%;
+    padding: 5% 0;
+}
+
+.btn{
+    color: #12ABB2;
+    background-color: #ffffff;
+    border: 1px solid #12ABB2;
+    border-radius: 0;
+    padding:  3px 10px;
+    margin: 5px 0;
+}
+.btn:hover{
+    color: #ffffff;
+    background-color: #12ABB2;
+    border: 1px solid transparent;
+    opacity: 0.8;
+    transition: all 0.2s;
+}
+
+h1, h1 a{
+    color: #555555;
+    text-decoration: none;
+    font-size: 1.3em;
+}
+
+.topbar{
+    background-color: #12ABB2;
+    width: 100%;
+    height: 200px;
+    color: #fff;
+    font-size: 1em;
+    top: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+.hometopbar{
+    opacity: 0.3;
+    height: 18%;
+    display:none;
+    position: absolute;
+}
+
+.hometopbar .title{
+    margin-top: 35px;
+
+}
+.title{
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 3.2em;
+    text-align: center;
+    margin-top: 25px;
+}
+
+.title a{
+    color: #fff;
+}
+.title a:hover{
+    color: rgba(255,255,255,0.7)
+}
+.topbar nav{
+    margin: 3%;
+    text-align: center;
+}
+
+.hide{
+    display:none;
+}
+.topbar nav a{
+    padding: 8px 20px;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 5%;
+    opacity: 0.7;
+    font-weight: bold;
+    border: 1px solid transparent;
+}
+.topbar nav a.active{
+    border: 1px solid rgba(255,255,255,0.8);
+    opacity:0.9;
+}
+.topbar nav a:hover{
+    opacity: 1;
+    border: 1px solid rgba(255,255,255,0.5);
+    -webkit-transition: all .3s;
+    -moz-transition: all .3s;
+    -ms-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+}
+
+a:hover{
+    text-decoration:none;
+}
+
+.img-container{
+    overflow: hidden;
+    height: 170px;
+}
+
+.img-container img{
+    min-width: 280px;
+    min-eeight: 180px;
+    max-width:380px;
+    max-height: 280px;
+}
+
+/*----------------NEW POST FORM------------------*/
+
+.newpostform{
+    position: relative;
+    top: 140px;
+    background: #fff;
+    color: #2f3238;
+    font-size: 1em;
+    margin: 0px 40px;
+    padding: 10px 30px;
+}
+
+.suggest_img{
+   background: url("../img/lonelyplanets.jpg") left top;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+    top: 10px;
+    height: 100%;
+    position:fixed;
+
+}
+#mobile_gallery{
+    display:none;
+}
+/* ------------------ HOVER EFFECT --------------- */
+figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px;
+    /*width: 310px;*/
+    min-width: 280px;
+    max-width: 350px;
+	max-height: 290px;
+    display: block;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+figure figcaption {
+	padding: 1.6em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	/*-webkit-backface-visibility: hidden;*/
+	/*backface-visibility: hidden;*/
+}
+
+
+figcaption,
+figcaption > a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+figcaption > a{
+    position: relative;
+	top: 0;
+	left: 0;
+}
+
+
+figure h2 {
+	font-size: 1.6em;
+	font-weight: 600;
+    color: #fff;
+    text-shadow: 1px 1px #777e8b;
+}
+
+figure.effect {
+	background: #2f3238;
+}
+
+figure.effect img {
+	max-width: none;
+	height: 380px;
+	-webkit-transition: opacity 1s, -webkit-transform 1s;
+	transition: opacity 1s, transform 1s;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+figure.effect figcaption {
+	text-align: left;
+    width: 320px;
+}
+
+figure.effect h2 {
+	position: relative;
+	padding: 0.3em 0;
+
+}
+
+figure.effect p {
+	display: inline-block;
+	margin: 0 0 0.25em;
+	padding: 0.4em 1em;
+	background: rgba(255,255,255,0.9);
+	color: #2f3238;
+	text-transform: none;
+	font-weight: 500;
+	font-size: 75%;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-360px,0,0);
+	transform: translate3d(-360px,0,0);
+}
+
+figure.effect p:first-child {
+	-webkit-transition-delay: 0.15s;
+	transition-delay: 0.1s;
+}
+
+figure.effect:hover p:first-child {
+	-webkit-transition-delay: 0s;
+	transition-delay: 0.15s;
+}
+
+figure.effect:hover img {
+	opacity: 0.4;
+	-webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+}
+
+figure.effect:hover p {
+	opacity: 1;
+	-webkit-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+}
+
+/*-------------- GALLERY ------------*/
+.imagegallery{
+    top: 130px;
+    margin: 0 12px;
+    width:100%;
+    height: 520px;
+    background-color: #eee;
+}
+
+#gallery {
+    max-height: 500px;
+    float:right;
+    overflow: hidden;
+}
+
+.thumbs{
+    top: 10px;
+    width: auto;
+    padding: 10px;
+}
+.thumbs > .col-sm-3{
+    margin: 5px;
+    padding: 0px;
+    max-height: 80px;
+    max-width: 110px;
+    overflow: hidden;
+    border: 3px solid #fff;
+}
+.gal_hover{
+   border: #12ABB2;
+    -webkit-filter: brightness(1.2) grayscale(1);
+    -webkit-transform: scale3d(1.1,1.1,1);
+	transform: scale3d(1.1,1.1,1);
+    transition: 0.2s;
+
+}
+.thumb{
+    height: 80%;
+    width: 100%;}
+
+#feature {
+    width: 600px;
+    margin: 10px;
+}
+
+#feature img {
+    border: 4px solid #fff;
+}
+
+.carousel, .carousel-inner> .item>img, .carousel-inner>.item>a>img{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    top: 80px;
+    left: 5px;
+}
+
+/*------------------- MEDIA SCREENS ----------------------------*/
+
+
+
+@media screen and (max-width: 678px){
+    .blogcontent{
+        top: 0px;
+    }
+    #gridview{
+        display: none;
+    }
+
+    #listview{
+        display: block;
+    }
+
+    #listview .col-sm-3{
+        overflow:hidden;
+        height: 250px;
+    }
+    #listview img{
+        width: 100%;
+        height: 100%;
+    }
+    #listview h1{
+        padding: 0;
+        font-size: 1.2em;
+    }
+}
+
+.readmore{
+    color: #12ABB2;
+    font-weight: bolder;
+}
+

@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+    {%  load bootstrap_tags %}
+<div class="suggest_img"></div>
+    <div class="col-sm-12 ">
+<div class="col-sm-7">
+    <div class="newpostform">
+        <h1>Your Suggestions</h1>
+
+        <p>Been somewhere that really made an impact? Share your experiences here, some new suggestions are always welcome to add to the never ending list!</p>
+
+<hr>
+        <form method="POST" enctype="multipart/form-data">
+        <!--csrf is a security measure to present Cross Site Request Forgery-->
+            {%  csrf_token %}
+            <!--renders all form fields specified in the BlogPostForm class-->
+            {{ form | as_bootstrap }}
+            <button type = "submit" class="btn btn-btn-btn-info">Save</button>
+        </form>
+    </div>
+</div>
+    </div>
+
+{% endblock %}
