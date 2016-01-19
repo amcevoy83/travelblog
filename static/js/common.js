@@ -31,7 +31,8 @@ $('.blogcontent').fadeIn('slow');
     else {
         $("#button").click(function() {
             $(".herobar").fadeOut(1000);
-            //$.cookie('noShowHerobar', true);
+            //$('.hometopbar').slideDown(600);
+            $.cookie('noShowHerobar', true);
              $('.fader').each(function () {
                 $(this).fadeIn(Math.random()*3500);
                     });

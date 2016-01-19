@@ -1,18 +1,21 @@
 {%  extends "base.html" %}
 {% block content %}
-
-    <header>
-<div class="homecontainer"></div>
-</header>
-<div class="herobar">
-    <h2>Travel Escapades</h2>
+<header>
+    <div class="header-content">
+        <div class="header-content-inner">
+            <div class="herobar">
+            <h2>Travel Escapades</h2>
     <h4>The Life & Times of An Irish Girl Abroad</h4>
     <div id="button"class="intro_readon">Read On ></div>
+                </div>
+        </div>
+    </div>
 
-</div>
+</header>
+
     <div class="row">
         <div class="col-sm-12 overview">
-
+            <div style="margin-left:90px ">
             <a href="{% url 'melbourne' %}">
             <div class="col-sm-4 fader homepod "><h1>Some Ramblings</h1>
             <div class="inner ramb"></div>
@@ -29,7 +32,7 @@
             <div class="inner suggest"></div>
             </div>
             </a>
-
+</div>
 {#            <a href="{% url 'melbourne' %}">#}
 {#            <div class="col-sm-3 fader"><h1>Say Hello</h1>#}
 {#            <div class="inner hello"></div>#}

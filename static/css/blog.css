@@ -3,6 +3,9 @@ body{
     padding-top: 50px;
 }
 
+.black{
+    background-color: #000;
+}
 .maincontent{
     border: 1px solid #ededed;
     top: 160px;
@@ -14,20 +17,6 @@ body{
 }
 
 /*---------------////HOME ELEMENTS ////-------------------*/
-
-
-header{
-	background-image: url("../img/uluru.jpg");
-	width: 100%;
-	margin: 0 auto;
-	background-repeat:no-repeat;
-	background-size:cover;
-	background-position: center;
-	position: absolute;
-    top: 0;
-	color: #fff;
-	height: 850px;   /*update*/
-}
 
 .homepod{
     min-width: 320px;
@@ -46,7 +35,7 @@ header{
 
 .herobar h2{
     font-family: 'Shadows Into Light', cursive;
-    font-size: 4em;
+    font-size: 3em;
     color: #fff;
 }
 
@@ -76,9 +65,11 @@ header{
 .overview{
     padding: 0% 2%;
     position: absolute;
-    margin-left: 10%;
+    /*margin-left: 20px;*/
+    /*margin-right: 7%;*/
     top: 25%;
-    width: 80%;
+    width: 100%;
+    z-index: 1;
 }
 
 .overview a{
@@ -155,7 +146,7 @@ header{
 
 .myposts{
     background-color: #efefef;
-    padding: 30px;
+    padding: 30px 10px;
     width: 100%;
     margin: 0px;
 }
@@ -181,6 +172,8 @@ header{
 }
 .articleimg img{
     width: 100%;
+    position: relative;
+    top: -180px;
 }
 
 .articlecontent{
@@ -210,6 +203,7 @@ header{
         display: none;
         height: 5%;
         font-size: 0.5em;
+     margin: 0px;
     }
 .listimg{
     width: 100%;
@@ -242,7 +236,7 @@ h1, h1 a{
 .topbar{
     background-color: #12ABB2;
     width: 100%;
-    height: 200px;
+    height: 180px;
     color: #fff;
     font-size: 1em;
     top: 0;
@@ -251,14 +245,16 @@ h1, h1 a{
 }
 
 .hometopbar{
-    opacity: 0.3;
-    height: 18%;
+    background-color: transparent;
+    height: 200px;
     display:none;
     position: absolute;
+    z-index: 1;
 }
 
 .hometopbar .title{
-    margin-top: 35px;
+    margin-top: 25px;
+    color: #12ABB2;
 
 }
 .title{
@@ -283,7 +279,7 @@ h1, h1 a{
     display:none;
 }
 .topbar nav a{
-    padding: 8px 20px;
+    padding: 8px 10px;
     color: #fff;
     text-transform: uppercase;
     margin: 5%;
@@ -316,7 +312,7 @@ a:hover{
 
 .img-container img{
     min-width: 280px;
-    min-eeight: 180px;
+    min-height: 180px;
     max-width:380px;
     max-height: 280px;
 }
@@ -351,11 +347,12 @@ figure {
 	position: relative;
 	float: left;
 	overflow: hidden;
-	margin: 10px;
+	margin: 0px;
     /*width: 310px;*/
-    min-width: 280px;
-    max-width: 350px;
-	max-height: 290px;
+    width: 30%;
+    max-width: 300px;
+	max-height: 270px;
+    min-height: 50px;
     display: block;
 	background: #3085a3;
 	text-align: center;
@@ -379,7 +376,6 @@ figure figcaption {
 	/*backface-visibility: hidden;*/
 }
 
-
 figcaption,
 figcaption > a {
 	position: absolute;
@@ -397,7 +393,8 @@ figcaption > a{
 
 
 figure h2 {
-	font-size: 1.6em;
+	font-size: 1.5em;
+    padding-right: 5px;
 	font-weight: 600;
     color: #fff;
     text-shadow: 1px 1px #777e8b;
@@ -423,7 +420,7 @@ figure.effect figcaption {
 
 figure.effect h2 {
 	position: relative;
-	padding: 0.3em 0;
+	padding: 0.1em 1em 0 0;
 
 }
 
@@ -467,11 +464,19 @@ figure.effect:hover p {
 /*-------------- GALLERY ------------*/
 .imagegallery{
     top: 130px;
-    margin: 0 12px;
+    margin: 0;
+    padding-left: 0;
     width:100%;
     height: 520px;
-    background-color: #eee;
+    background-color: #555;
+    background: linear-gradient(rgba(0,0,0,0) 90%,rgba(0,0,0,.8) 100%), url(../img/uluru.jpg);
+background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
 }
+
 
 #gallery {
     max-height: 500px;
@@ -485,7 +490,7 @@ figure.effect:hover p {
     padding: 10px;
 }
 .thumbs > .col-sm-3{
-    margin: 5px;
+    margin-bottom: 10px;
     padding: 0px;
     max-height: 80px;
     max-width: 110px;
@@ -523,11 +528,9 @@ figure.effect:hover p {
 
 /*------------------- MEDIA SCREENS ----------------------------*/
 
-
-
 @media screen and (max-width: 678px){
     .blogcontent{
-        top: 0px;
+        top: 40px;
     }
     #gridview{
         display: none;
@@ -539,15 +542,21 @@ figure.effect:hover p {
 
     #listview .col-sm-3{
         overflow:hidden;
-        height: 250px;
+        position: relative;
+        max-height:350px;
     }
+
     #listview img{
         width: 100%;
-        height: 100%;
+        top: -150px;
     }
+
     #listview h1{
         padding: 0;
         font-size: 1.2em;
+    }
+    .topbar{
+        height: 130px;
     }
 }
 
@@ -556,3 +565,43 @@ figure.effect:hover p {
     font-weight: bolder;
 }
 
+header {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 700px;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(rgba(0,0,0,0) 90%,rgba(0,0,0,.8) 100%), url(../img/uluru.jpg);
+background-position: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+header .header-content {
+    position: relative;
+    width: 100%;
+    padding: 100px 15px;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    header {
+        min-height: 100%;
+    }
+
+    header .header-content {
+        position: absolute;
+        top: 30%;
+        left: 4%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 0 50px;
+        -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
+
+}
