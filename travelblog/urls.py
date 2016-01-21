@@ -24,5 +24,5 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'',include('blog.urls')),
     url(r'^post/new/$',new_post, name='new_post'),
-    url(r'^media/(?P<path>.*)$','django.views.static.serve',{'document_root': MEDIA_ROOT})
-]+	static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
+    url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) + static(settings.STATIC_URL,document_root=settings.STATIC_ROOT)
