@@ -1,12 +1,14 @@
 {%  extends "base.html" %}
 {% block content %}
 
-<div class="col-sm-12 blogcontent row-centered myposts ">
+<div class="blogcontent myposts ">
 
+ <div class="innerblog">
     {% for post in top5 %}
 {#        <div class="col-sm-6 gallerycontent">#}
 {#            <img class="galleryimg" src="/media/{{ post.image }}" />#}
 {#        </div>#}
+
     <div id="gridview">
             <figure class="effect">
             <div class="col-sm-3">
@@ -36,7 +38,7 @@
         </div>
     {% endfor %}
 </div>
-
+</div>
 </div>
 
 {% endblock content %}
