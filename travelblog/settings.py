@@ -84,7 +84,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'travelblog_db',
-        'USER': 'tb_user',
+        'USER': 'tbuser',
         'PASSWORD': 'password',
         'HOST': 'localhost',
         'PORT': '5432',
