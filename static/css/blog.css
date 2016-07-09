@@ -7,7 +7,7 @@ body{
     background-color: #000;
 }
 .maincontent{
-    border: 18px solid #ededed;
+    border: 1px solid #ededed;
     top: 160px;
 }
 
@@ -27,7 +27,7 @@ body{
     top: 30%;
     left: 30%;
     color: #fff;
-    background-color: rgba(18, 171, 178, 0.46);
+   /* background-color: rgba(18, 171, 178, 0.46);*/
     padding: 2%;
     text-align: center;
     border: 10px solid #fff;
