@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block content %}
+    <table class="table table-striped">
+    <thead>
+    <tr>
+
+       <th>Image</th>
+        <th>Name</th>
+        <th>Descriptions</th>
+
+        <th>Price</th>
+        <th></th>
+
+    </tr>
+    </thead>
+
+    <tbody>
+    {%  for product in products %}
+        <tr>
+         <td> {%  if product.img %}<img src="/media/{{ product.img }}">{% endif %}</td>
+        <td> {{ product.name }}</td>
+        <td> {{ product.description }}</td>
+
+        <td> {{ product.price }}</td>
+{#            ending this button with .sandbox enables all transactions to go to the test side of paypal. .render would be used instead of .sandbox when putting live#}
+        <td> {{ product.paypal_form.sandbox }}</td>
+
+        </tr>
+    {% endfor %}
+    </tbody>
+    </table>
+
+    <hr>
+    <br><br>
+
+{% endblock %}
