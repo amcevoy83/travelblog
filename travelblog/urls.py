@@ -28,7 +28,6 @@ urlpatterns = [
     url(r'^paypal-return/', paypal_return),
     url(r'^product/$', new_product, name='new_product'),
     url(r'^paypal-cancel/', paypal_cancel),
-    url(r'^$', all_products, name="index"),
     url(r'',include('blog.urls')),
     url(r'^post/new/$',new_post, name='new_post'),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
