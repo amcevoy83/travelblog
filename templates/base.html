@@ -19,7 +19,7 @@
 </head>
 <body class="{% ifequal request.path '/'%}black{% endifequal %}">
 <div class="topbar {% ifequal request.path '/'%}hometopbar{% endifequal %}" >
-    <div class="title"> <a href='{% url 'home' %}'>Travel Escapades</a></div>
+    <div class="title"> <a href='{% url 'home' %}'>Travel</a></div>
 
     <div><button id="activatenav" class="{% ifequal request.path '/'%}hide{% endifequal %}" >&#9776;</button></div>
     <nav class="{% ifequal request.path '/'%}hide{% endifequal %}">
