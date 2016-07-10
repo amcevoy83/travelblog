@@ -35,7 +35,6 @@ INSTALLED_APPS = (
     'paypal',
     'tinymce',
     'emoticons',
-    'debug-toolbar',
 )
 
 MIDDLEWARE_CLASSES = (
