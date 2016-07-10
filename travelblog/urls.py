@@ -19,9 +19,15 @@ from blog.views import *
 from settings import MEDIA_ROOT
 import settings
 from django.conf.urls.static import static
+from views import paypal_return, paypal_cancel
+from paypal.standard.ipn import urls as paypal_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^somethingtricky/', include(paypal_urls)),
+    url(r'^paypal-return/$', paypal_return),
+    url(r'^paypal-cancel/$', paypal_cancel),
+    url(r'^$', all_products, name="index"),
     url(r'',include('blog.urls')),
     url(r'^post/new/$',new_post, name='new_post'),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT}),
