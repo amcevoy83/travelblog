@@ -19,7 +19,7 @@ from blog.views import *
 from settings import MEDIA_ROOT
 import settings
 from django.conf.urls.static import static
-from views import paypal_return, paypal_cancel, new_product
+#from views import paypal_return, paypal_cancel, new_product
 from paypal.standard.ipn import urls as paypal_urls
 
 urlpatterns = [
