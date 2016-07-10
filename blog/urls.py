@@ -10,7 +10,6 @@ urlpatterns =[
               url(r'^post/new/$', views.new_post, name='new_post'),
               url(r'^gallery/$', views.gallery, name='gallery'),
               url(r'^suggestion/$', views.suggestion_post, name='suggestion_post'),
-              url(r'^test/?$', views.new_product, name='new_product'),
 
 ]
 
