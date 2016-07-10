@@ -30,6 +30,11 @@ INSTALLED_APPS = (
     'blog',
     'disqus',
     'django_forms_bootstrap',
+    'paypal.standard.ipn',
+    'paypal.standard.forms',
+    'paypal_app',
+    'paypal',
+    'accounts',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -99,8 +104,8 @@ USE_TZ = True
 #setting up access to paypal
 
 SITE_URL = 'http://109.74.205.188:8000'
-PAYPAL_NOTIFY_URL = 'http://109.74.205.188/somethingtricky/'
-PAYPAL_RECEIVER_EMAIL = 'aoifemcevoy-facilitator@gmail.com'
+PAYPAL_NOTIFY_URL = 'http://71238352.ngrok.io/p4yp4lur14u5e/'
+PAYPAL_RECEIVER_EMAIL = 'mike@hibbert.com'
 
 
 # Static files (CSS, JavaScript, Images)
