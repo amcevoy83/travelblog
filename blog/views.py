@@ -1,6 +1,6 @@
 from django.shortcuts import render , get_object_or_404
 from django.utils import timezone
-from .models import Post
+from .models import Post, Product
 from .forms import BlogPostForm, BlogSuggestForm
 from django.shortcuts import redirect
 from django.views.decorators.csrf import csrf_exempt
