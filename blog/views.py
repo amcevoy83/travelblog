@@ -10,6 +10,9 @@ from django.views.decorators.csrf import csrf_exempt
 def home(request):
     return render(request, "index.html")
 
+def new_product(request):
+    return render(request, "product_list.html")
+    
 def gallery(request):
     return render(request, "gallery.html")
 
