@@ -26,7 +26,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^p4yp4lur14u5e/', include(paypal_urls)),
     url(r'^paypal-return/', paypal_return),
-    url(r'^product/$', views.new_product, name='new_product'),
+    url(r'^product/$', new_product, name='new_product'),
     url(r'^paypal-cancel/', paypal_cancel),
     url(r'^$', all_products, name="index"),
     url(r'',include('blog.urls')),
