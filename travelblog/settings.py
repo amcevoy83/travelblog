@@ -33,6 +33,9 @@ INSTALLED_APPS = (
     'paypal.standard.ipn',
     'paypal.standard.forms',
     'paypal',
+    'tinymce',
+    'emoticons',
+    'debug-toolbar',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -119,6 +122,8 @@ STATICFILES_DIRS = (
     os.path.join(BASE_DIR, "static"), #add a directory at the project level
 )
 DISQUS_WEBSITE_SHORTNAME = "bootcampblog"
+
+TINYMCE_JS_ROOT= os.path.join(BASE_DIR, "static",'js','tinymce','tinymce.min.js')
 
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 MEDIA_URL = '/media/'
