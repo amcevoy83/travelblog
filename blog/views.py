@@ -1,18 +1,13 @@
 from django.shortcuts import render , get_object_or_404
 from django.utils import timezone
-from models import Post, Product
+from .models import Post
 from .forms import BlogPostForm, BlogSuggestForm
 from django.shortcuts import redirect
-from django.views.decorators.csrf import csrf_exempt
-
 
 # Create your views here.
 def home(request):
     return render(request, "index.html")
 
-def new_product(request):
-    return render(request, "product_list.html")
-    
 def gallery(request):
     return render(request, "gallery.html")
 
@@ -39,8 +34,8 @@ def top_5(request):
     return render (request, "top5.html", {'top5': top5} )
 
 def melbourne(request):
-    top5 = Post.objects.filter(published_date__lte=timezone.now()).order_by('-views')
-    return render (request, "melbourne_gallery.html", {'top5': top5} )
+    melbourne = Post.objects.filter(tag='Melbourne')
+    return render (request, "melbourne_gallery.html", {'melbourne': melbourne} )
 
 def new_post(request):
     if request.method == "POST":
@@ -64,6 +59,7 @@ def suggestion_post(request):
             post.published_date = timezone.now()
             post.save()
             return render (request, "suggest_thanks.html")
+          #  return redirect('blog.views.post_detail', id = post.pk)
     else:
         form = BlogSuggestForm()
     return render(request, 'blogpostform.html', {'form':form})
@@ -81,13 +77,3 @@ def edit_post(request,pk):
     else:
         form = BlogPostForm(instance=post)
     return render(request, 'blogpostform.html',{'form':form})
-    
-#set up paypal
-@csrf_exempt
-def paypal_return(request):
-    args = {'post': request.POST, 'get': request.GET}
-    return render(request, 'paypal_return.html', args)
-
-def paypal_cancel(request):
-    args = {'post':request.POST, 'get':request.GET}
-    return render( request,'paypal_cancel.html', args)
