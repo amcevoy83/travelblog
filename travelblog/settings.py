@@ -107,6 +107,8 @@ SITE_URL = 'http://109.74.205.188:8000'
 PAYPAL_NOTIFY_URL = 'http://71238352.ngrok.io/p4yp4lur14u5e/'
 PAYPAL_RECEIVER_EMAIL = 'mike@hibbert.com'
 
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend','accounts.backends.EmailAuth',)
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
