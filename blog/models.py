@@ -1,7 +1,17 @@
 from django.db import models
 from django.utils import timezone
+from paypal.standard.forms import PayPalPaymentsForm
+from paypal.standard.ipn.signals import subscription_signup, subscription_cancel
 
 # Create your models here.
+
+#paypal payment model
+class Product(models.Model):
+    name = models.CharField(max_length= 254, default = '')
+    description = models.TextField()
+    price = models.DecimalField(max_digits=6, decimal_places=2)
+
+
 class Post(models.Model):
     class Meta:
         app_label = "blog"
