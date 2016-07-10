@@ -24,9 +24,9 @@ from paypal.standard.ipn import urls as paypal_urls
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^somethingtricky/', include(paypal_urls)),
-    url(r'^paypal-return/$', paypal_return),
-    url(r'^paypal-cancel/$', paypal_cancel),
+    url(r'^p4yp4lur14u5e/', include(paypal_urls)),
+    url(r'^paypal-return/', paypal_return),
+    url(r'^paypal-cancel/', paypal_cancel),
     url(r'^$', all_products, name="index"),
     url(r'',include('blog.urls')),
     url(r'^post/new/$',new_post, name='new_post'),
