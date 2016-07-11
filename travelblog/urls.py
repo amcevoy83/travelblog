@@ -17,7 +17,6 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from .settings import MEDIA_ROOT
 from blog.views import *
-from accounts.views import *
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
