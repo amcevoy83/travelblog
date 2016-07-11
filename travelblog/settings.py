@@ -53,6 +53,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.security.SecurityMiddleware',
 )
 
+AUTH_USER_MODEL = 'accounts.User'
+
+
 ROOT_URLCONF = 'travelblog.urls'
 
 TEMPLATES = [
