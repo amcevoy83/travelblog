@@ -54,6 +54,7 @@ MIDDLEWARE_CLASSES = (
 )
 
 AUTH_USER_MODEL = 'accounts.User'
+AUTHENTICATION_BACKENDS = ('django.contrib.auth.backends.ModelBackend','accounts.backends.EmailAuth',)
 
 
 ROOT_URLCONF = 'travelblog.urls'
