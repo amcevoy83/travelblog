@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'blog',
     'disqus',
     'django_forms_bootstrap',
+    'accounts',
 )
 
 MIDDLEWARE_CLASSES = (
