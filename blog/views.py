@@ -34,8 +34,10 @@ def top_5(request):
     return render (request, "top5.html", {'top5': top5} )
 
 def melbourne(request):
-    melbourne = Post.objects.filter(tag='Melbourne')
-    return render (request, "melbourne_gallery.html", {'melbourne': melbourne} )
+    # melbourne = Post.objects.filter(tag='Melbourne')
+    # return render (request, "melbourne_gallery.html", {'melbourne': melbourne} )
+    top5 = Post.objects.filter(published_date__lte=timezone.now()).order_by('-views')
+    return render (request, "melbourne_gallery.html", {'top5': top5} )
 
 def new_post(request):
     if request.method == "POST":
