@@ -24,8 +24,8 @@ urlpatterns = [
     url(r'',include('blog.urls')),
     url(r'^post/new/$',new_post, name='new_post'),
     url(r'^register/$','accounts.views.register', name='register'),
-    url(r'^login/$','accounts.views.login', name='login'),
-    url(r'^logout/$','accounts.views.logout', name='logout'), ##removed two // at the start of the logout regex
-    url(r'^profile/$', 'accounts.views.profile', name='profile'),
+    url(r'^login/$','login', name='login'),
+    url(r'^logout/$','logout', name='logout'), ##removed two // at the start of the logout regex
+    url(r'^profile/$', 'profile', name='profile'),
     url(r'^media/(?P<path>.*)$','django.views.static.serve',{'document_root': MEDIA_ROOT})
 ]
