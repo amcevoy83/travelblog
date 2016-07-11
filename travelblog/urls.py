@@ -17,10 +17,15 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from .settings import MEDIA_ROOT
 from blog.views import *
+from accounts.views import *
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'',include('blog.urls')),
     url(r'^post/new/$',new_post, name='new_post'),
+    url(r'^register/$','accounts.views.register', name='register'),
+    url(r'^login/$','accounts.views.login', name='login'),
+    url(r'^logout/$','accounts.views.logout', name='logout'), ##removed two // at the start of the logout regex
+    url(r'^profile/$', 'accounts.views.profile', name='profile'),
     url(r'^media/(?P<path>.*)$','django.views.static.serve',{'document_root': MEDIA_ROOT})
 ]
